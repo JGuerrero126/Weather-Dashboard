@@ -46,19 +46,21 @@ function weatherInfo() {
       wind.text("Wind: " + data.current.wind_speed)
       humidity.text("Humidity: " + data.current.humidity)
       uv.text("UV Index: " + data.current.uvi)
-      for(i = 0; i > 5; i++) {
-        var time = moment().add(i, "d").format("(M/D/YYYY)")
-        var cardContainer = $("div").addClass("card").attr("style", "width: 18rem;")
-        var cardBody = $("div").addClass("card-body")
+       for( i = 0; i < 5 ; i++ ) {
+        var time = moment().add(i+1, "d").format("(M/D/YYYY)")
+        var cardContainer = $("<div>").addClass("card").attr("style", "width: 200px; margin-left: 10px;")
+        var cardBody = $("<div>").addClass("card-body")
         var date = $("<h5>").addClass("card-title").text(time)
         var daytemp = $("<p>").addClass("card-text").text("Temp: " + data.daily[i].temp.day)
         var daywind = $("<p>").addClass("card-text").text("Wind: " + data.daily[i].wind_speed)
         var dayhumidity =  $("<p>").addClass("card-text").text("Humidity: " + data.daily[i].humidity)
-
-        $(cardBody).append(date).append(daytemp).append(daywind).append(dayhumidity)
-        $(cardContainer).append(cardBody)
-        $(fiveDay).append(cardContainer)
-      }
+        cardBody.append(date)
+        cardBody.append(daytemp)
+        cardBody.append(daywind)
+        cardBody.append(dayhumidity)
+        cardContainer.append(cardBody)
+        fiveDay.append(cardContainer)
+       }
     });
     });
 }
