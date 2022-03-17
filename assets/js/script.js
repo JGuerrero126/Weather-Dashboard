@@ -205,14 +205,19 @@ pastSearches.on("click", function (event) {
       humidity.text("Humidity: " + data.current.humidity + " %")
       if (data.current.uvi < 2) {
         uv.text("UV Index: " + data.current.uvi).addClass("greenback")
+        uv.removeClass("yellowback orangeback redback purpleback")
       } else if (data.current.uvi < 5) {
         uv.text("UV Index: " + data.current.uvi).addClass("yellowback")
+        uv.removeClass("greenback orangeback redback purpleback")
       } else if (data.current.uvi < 7) {
         uv.text("UV Index: " + data.current.uvi).addClass("orangeback")
+        uv.removeClass("yellowback greenback redback purpleback")
       } else if (data.current.uvi < 10) {
         uv.text("UV Index: " + data.current.uvi).addClass("redback")
+        uv.removeClass("yellowback orangeback greenback purpleback")
       } else if (data.current.uvi >= 11) {
         uv.text("UV Index: " + data.current.uvi).addClass("purpleback")
+        uv.removeClass("yellowback orangeback redback greenback")
       }
       time = moment().add(i+1, "d").format("(M/D/YYYY)")
       oneDate.text(moment().add(1, "d").format("(M/D/YYYY)"))
