@@ -61,16 +61,25 @@ ul {
 
 .yellowback {
     background-color: yellow;
+    width: 200px;
 }
 
 .orangeback {
     background-color: orange;
+    width: 200px;
 }
 
 .redback {
     background-color: red;
+    width: 200px;
 }
 
 .purpleback {
     background-color: purple;
+    width: 200px;
+}
+
+.custom-card {
+    background-color: rgb(26, 25, 78);
+    color: white;
 }
