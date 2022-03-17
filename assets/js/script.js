@@ -77,19 +77,19 @@ function weatherInfo() {
       var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
       var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
       var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
-      temp.text("Temp: " + data.current.temp + "°F")
-      wind.text("Wind: " + data.current.wind_speed + " MPH")
-      humidity.text("Humidity: " + data.current.humidity + " %")
+      temp.text(data.current.temp + "°F")
+      wind.text(data.current.wind_speed + " MPH")
+      humidity.text(data.current.humidity + " %")
       if (data.current.uvi < 2) {
-        uv.text("UV Index: " + data.current.uvi).addClass("greenback")
+        uv.text(data.current.uvi).addClass("greenback")
       } else if (data.current.uvi < 5) {
-        uv.text("UV Index: " + data.current.uvi).addClass("yellowback")
+        uv.text(data.current.uvi).addClass("yellowback")
       } else if (data.current.uvi < 7) {
-        uv.text("UV Index: " + data.current.uvi).addClass("orangeback")
+        uv.text(data.current.uvi).addClass("orangeback")
       } else if (data.current.uvi < 10) {
-        uv.text("UV Index: " + data.current.uvi).addClass("redback")
+        uv.text(data.current.uvi).addClass("redback")
       } else if (data.current.uvi >= 11) {
-        uv.text("UV Index: " + data.current.uvi).addClass("purpleback")
+        uv.text(data.current.uvi).addClass("purpleback")
       }
       time = moment().add(i+1, "d").format("(M/D/YYYY)")
       oneDate.text(moment().add(1, "d").format("(M/D/YYYY)"))
@@ -200,23 +200,23 @@ pastSearches.on("click", function (event) {
       var iconurl3 = "http://openweathermap.org/img/w/" + iconcode3 + ".png";
       var iconurl4 = "http://openweathermap.org/img/w/" + iconcode4 + ".png";
       var iconurl5 = "http://openweathermap.org/img/w/" + iconcode5 + ".png";
-      temp.text("Temp: " + data.current.temp + "°F")
-      wind.text("Wind: " + data.current.wind_speed + " MPH")
-      humidity.text("Humidity: " + data.current.humidity + " %")
+      temp.text(data.current.temp + "°F")
+      wind.text(data.current.wind_speed + " MPH")
+      humidity.text(data.current.humidity + " %")
       if (data.current.uvi < 2) {
-        uv.text("UV Index: " + data.current.uvi).addClass("greenback")
+        uv.text(data.current.uvi).addClass("greenback")
         uv.removeClass("yellowback orangeback redback purpleback")
       } else if (data.current.uvi < 5) {
-        uv.text("UV Index: " + data.current.uvi).addClass("yellowback")
+        uv.text(data.current.uvi).addClass("yellowback")
         uv.removeClass("greenback orangeback redback purpleback")
       } else if (data.current.uvi < 7) {
-        uv.text("UV Index: " + data.current.uvi).addClass("orangeback")
+        uv.text(data.current.uvi).addClass("orangeback")
         uv.removeClass("yellowback greenback redback purpleback")
       } else if (data.current.uvi < 10) {
-        uv.text("UV Index: " + data.current.uvi).addClass("redback")
+        uv.text(data.current.uvi).addClass("redback")
         uv.removeClass("yellowback orangeback greenback purpleback")
       } else if (data.current.uvi >= 11) {
-        uv.text("UV Index: " + data.current.uvi).addClass("purpleback")
+        uv.text(data.current.uvi).addClass("purpleback")
         uv.removeClass("yellowback orangeback redback greenback")
       }
       time = moment().add(i+1, "d").format("(M/D/YYYY)")

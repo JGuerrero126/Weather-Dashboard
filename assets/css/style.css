@@ -57,29 +57,40 @@ ul {
 .greenback {
     background-color: green;
     width: 200px;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .yellowback {
     background-color: yellow;
     width: 200px;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .orangeback {
     background-color: orange;
     width: 200px;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .redback {
     background-color: red;
     width: 200px;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .purpleback {
     background-color: purple;
     width: 200px;
+    padding: 4px;
+    border-radius: 4px;
 }
 
 .custom-card {
     background-color: rgb(26, 25, 78);
     color: white;
+    font-size: 125%;
 }
