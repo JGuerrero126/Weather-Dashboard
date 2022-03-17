@@ -36,7 +36,7 @@ var storedCities = []
 
 function weatherInfo() {
     var requestedCity = cityInput.val().replace(/\s+/g, "+")
-    var locationURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + requestedCity + "&limit=1&appid=23343143cc261b0ecb35b3be3eb91e01"
+    var locationURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + requestedCity + "&limit=1&appid=23343143cc261b0ecb35b3be3eb91e01"
     console.log(locationURL)
   
     fetch(locationURL)
@@ -159,7 +159,7 @@ pastSearches.on("click", function (event) {
 
     if (element.matches("li")) {
     var input = element.textContent
-    var locationURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + input + "&limit=1&appid=23343143cc261b0ecb35b3be3eb91e01"
+    var locationURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + input + "&limit=1&appid=23343143cc261b0ecb35b3be3eb91e01"
     console.log(locationURL)
   
     fetch(locationURL)
