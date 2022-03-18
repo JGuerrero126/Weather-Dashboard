@@ -14,4 +14,4 @@ The tool I had to really get familiar with was Bootstrap. Despite having brief e
 
 ## Images/Screenshots
 
-![Screenshot](screenshot.png)
+![Screenshot](Screenshot.png)
